@@ -5,7 +5,7 @@ export class Socio {
     apellidoso?: String;
     dniso?: String;
     telefonoso?:String;
-    estadoso?:String;
+    estadoso?:number;
 
 
 
