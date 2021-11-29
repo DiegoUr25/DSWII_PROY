@@ -16,7 +16,7 @@ export class ReservaService {
     return this.http.post(baseURL+"",data);
   }
 
-  consultaReserva(filtro:string): Observable<Reserva[]>{
+  consultaReserva(filtro:String): Observable<Reserva[]>{
     if(filtro.trim() == ''){
       return this.http.get<Reserva[]>(baseURL+"");
     }else {
