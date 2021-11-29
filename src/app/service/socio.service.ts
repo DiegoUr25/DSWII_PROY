@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { basename } from 'path';
 import { Observable } from 'rxjs';
 import { Socio } from '../models/socio';
 
