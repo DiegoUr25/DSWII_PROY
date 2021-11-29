@@ -3,10 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListaProductoComponent } from './producto/lista-producto.component';
-import { DetalleProductoComponent } from './producto/detalle-producto.component';
-import { NuevoProductoComponent } from './producto/nuevo-producto.component';
-import { EditarProductoComponent } from './producto/editar-producto.component';
 import { interceptorProvider } from './interceptors/prod-interceptor.service';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -38,10 +34,6 @@ import { CrudreservaComponent } from './components/crudreserva/crudreserva.compo
 @NgModule({
   declarations: [
     AppComponent,
-    ListaProductoComponent,
-    DetalleProductoComponent,
-    NuevoProductoComponent,
-    EditarProductoComponent,
     LoginComponent,
     RegistroComponent,
     MenuComponent,

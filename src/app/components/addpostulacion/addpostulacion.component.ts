@@ -60,17 +60,6 @@ export class AddpostulacionComponent implements OnInit {
 
     }
 
-
-   
-  
-
-
-
-
-
-  
-
-
   ngOnInit() {
   }
   onLogout(): void {
