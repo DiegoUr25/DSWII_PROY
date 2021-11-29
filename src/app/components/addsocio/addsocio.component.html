@@ -23,7 +23,7 @@
                   Socio
                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" routerLink="/socio">Registra </a>
+                                    <a class="dropdown-item" routerLink="/addsocio">Registra </a>
                                     <a class="dropdown-item" routerLink="/crudsocio">Mantenimiento</a>
                                 </div>
                             </li>
@@ -34,7 +34,7 @@
                   Mesa
                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" routerLink="/mesa">Registra </a>
+                                    <a class="dropdown-item" routerLink="/addmesa">Registra </a>
                                     <a class="dropdown-item" routerLink="/crudmesa">Mantenimiento</a>
                                 </div>
                             </li>
@@ -44,7 +44,7 @@
                   Combos Familiares
                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" routerLink="/platillos">Registra </a>
+                                    <a class="dropdown-item" routerLink="/addplatillos">Registra </a>
                                     <a class="dropdown-item" routerLink="/crudplatillos">Mantenimiento</a>
                                 </div>
                             </li>
@@ -54,7 +54,7 @@
                   Reserva
                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" routerLink="/reserva">Registra </a>
+                                    <a class="dropdown-item" routerLink="/addreserva">Registra </a>
                                     <a class="dropdown-item" routerLink="/crudreserva">Mantenimiento</a>
                                 </div>
                             </li>
@@ -72,7 +72,7 @@
                         <h1 class="text-center">Bienvenido a Sabor criollo!</h1>
                         <div>
                             <fieldset class="border p-2 bg-white">
-                                <legend class="w-auto p-2 bg-white rounded border leyenda">Registro de Perfil</legend>
+                                <legend class="w-auto p-2 bg-white rounded border leyenda">Registro de Socio</legend>
                                 <div class="container">
 
                                     <form class="content" (submit)="insertSocio()">
@@ -86,21 +86,21 @@
                                             </div>
 
                                             <div class="mb-3 row">
-                                                <label for="cliente" class="col-sm-2 col-form-label">Apellido</label>
+                                                <label for="apellidoso" class="col-sm-2 col-form-label">Apellido</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" class="form-control" name="apellidoso" id="apellidoso" [(ngModel)]="socio.apellidoso" />
                                                 </div>
                                             </div>
 
                                             <div class="mb-3 row">
-                                                <label for="cliente" class="col-sm-2 col-form-label">DNI</label>
+                                                <label for="dniso" class="col-sm-2 col-form-label">DNI</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" class="form-control" name="dniso" id="dniso" [(ngModel)]="socio.dniso" />
                                                 </div>
                                             </div>
 
                                             <div class="mb-3 row">
-                                                <label for="cliente" class="col-sm-2 col-form-label">Telefono</label>
+                                                <label for="telefonoso" class="col-sm-2 col-form-label">Telefono</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" class="form-control" name="telefonoso" id="telefonoso" [(ngModel)]="socio.telefonoso" />
                                                 </div>

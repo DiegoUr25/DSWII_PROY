@@ -7,7 +7,7 @@ import { TokenService } from './service/token.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'PRACTIQUANT';isLogged = false;
+  title = 'SABOR CRIOLLO';isLogged = false;
   
   nombreUsuario = '';
 

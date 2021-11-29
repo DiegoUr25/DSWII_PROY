@@ -11,7 +11,6 @@ import { TokenService } from 'src/app/service/token.service';
 export class AddmesaComponent implements OnInit {
 
   mesa: Mesa={
-    codmesa:0,
     capacidad:0,
     idtipoest:0,
     descmesa:""
@@ -26,6 +25,7 @@ export class AddmesaComponent implements OnInit {
   }
   insertMesa(){
     console.log(this.mesa);
+    this.mesa.idtipoest=0
     this.mesaService.registraMesa(this.mesa).subscribe(
       response => {
         console.log(response.mensaje);

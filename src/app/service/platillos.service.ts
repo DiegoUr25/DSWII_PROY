@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Platillos } from '../models/platillos';
 
 
-const baseURL = ""
+const baseURL = "http://localhost:8090/restaurante/platillos"
 
 @Injectable({
   providedIn: 'root'
@@ -14,19 +14,19 @@ export class PlatillosService {
   constructor(private http:HttpClient) { }
 
   registraplatillo(data:Platillos):Observable<any>{
-    return this.http.post(baseURL+"",data);
+    return this.http.post(baseURL+"/registraPlatillo",data);
   }
 
   consultaPlatilllo(filtro:String): Observable<Platillos[]>{
     if(filtro.trim()==''){
-      return this.http.get<Platillos[]>(baseURL+"");
+      return this.http.get<Platillos[]>(baseURL+"/listaPlatilloPorNombreLike/todos");
     }else {
-      return this.http.get<Platillos[]>(baseURL+""+filtro);
+      return this.http.get<Platillos[]>(baseURL+"/listaPlatilloPorNombreLike/"+filtro);
     }
   }
     
   actualizaPlatillo(aux:Platillos): Observable<any>{
-    return this.http.put<any>(baseURL+"",aux)
+    return this.http.put<any>(baseURL+"/actualizarPlatillo",aux)
   }
 
 }

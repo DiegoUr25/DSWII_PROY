@@ -150,7 +150,8 @@ export class CrudreservaComponent implements OnInit {
 
   busca(aux: Reserva){
     console.log(" ==> busca ==> codpostulacion ==> " + aux.codreserva); 
-    
+    console.log(" ==> busca ==> codpostulacion ==> " + aux.codigoso!.codigoso); 
+    console.log(" ==> busca ==> codpostulacion ==> " + aux.codmesa!.codmesa); 
     this.reserva = aux;
   
     this.reservaService.consultaReserva("todos").subscribe(
@@ -158,7 +159,7 @@ export class CrudreservaComponent implements OnInit {
       response => this.reservas = response
    );
   
-   this.mesaService.consultaMesa("todos").subscribe(
+   this.mesaService.consultaEstadoMesa().subscribe(
       
     mesas => {
       this.listaMesas = mesas;
@@ -166,7 +167,7 @@ export class CrudreservaComponent implements OnInit {
     
   );
 
-  this.socioService.consultaSocio("todos").subscribe(
+  this.socioService.consultaEstadoSocio().subscribe(
       socios =>{
         this.listaSocios = socios;
       }

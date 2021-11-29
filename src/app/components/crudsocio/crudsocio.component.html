@@ -23,7 +23,7 @@
                   Socio
                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" routerLink="/socio">Registra </a>
+                                    <a class="dropdown-item" routerLink="/addsocio">Registra </a>
                                     <a class="dropdown-item" routerLink="/crudsocio">Mantenimiento</a>
                                 </div>
                             </li>
@@ -34,7 +34,7 @@
                   Mesa
                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" routerLink="/mesa">Registra </a>
+                                    <a class="dropdown-item" routerLink="/addmesa">Registra </a>
                                     <a class="dropdown-item" routerLink="/crudmesa">Mantenimiento</a>
                                 </div>
                             </li>
@@ -44,7 +44,7 @@
                   Combos Familiares
                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" routerLink="/platillos">Registra </a>
+                                    <a class="dropdown-item" routerLink="/addplatillos">Registra </a>
                                     <a class="dropdown-item" routerLink="/crudplatillos">Mantenimiento</a>
                                 </div>
                             </li>
@@ -54,7 +54,7 @@
                   Reserva
                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" routerLink="/reserva">Registra </a>
+                                    <a class="dropdown-item" routerLink="/addreserva">Registra </a>
                                     <a class="dropdown-item" routerLink="/crudreserva">Mantenimiento</a>
                                 </div>
                             </li>
@@ -114,12 +114,12 @@
                                                             <td>{{ aux.apellidoso }}</td>
                                                             <td>{{ aux.dniso}}</td>
                                                             <td>{{ aux.telefonoso}}</td>
-                                                            <td *ngIf="aux.estado == 1">
+                                                            <td *ngIf="aux.estadoso == 1">
                                                                 <button (click)="actualizaEstado(aux)" type="button" style="width: 90px" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModalEliminar">
                                   Activo
                                 </button>
                                                             </td>
-                                                            <td *ngIf="aux.estado == 0">
+                                                            <td *ngIf="aux.estadoso == 0">
                                                                 <button (click)="actualizaEstado(aux)" type="button" style="width: 90px" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModalEliminar">
                                   Inactivo
                                 </button>

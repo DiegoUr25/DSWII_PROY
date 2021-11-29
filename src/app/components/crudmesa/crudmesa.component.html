@@ -23,7 +23,7 @@
                   Socio
                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" routerLink="/socio">Registra </a>
+                                    <a class="dropdown-item" routerLink="/addsocio">Registra </a>
                                     <a class="dropdown-item" routerLink="/crudsocio">Mantenimiento</a>
                                 </div>
                             </li>
@@ -34,7 +34,7 @@
                   Mesa
                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" routerLink="/mesa">Registra </a>
+                                    <a class="dropdown-item" routerLink="/addmesa">Registra </a>
                                     <a class="dropdown-item" routerLink="/crudmesa">Mantenimiento</a>
                                 </div>
                             </li>
@@ -44,7 +44,7 @@
                   Combos Familiares
                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" routerLink="/platillos">Registra </a>
+                                    <a class="dropdown-item" routerLink="/addplatillos">Registra </a>
                                     <a class="dropdown-item" routerLink="/crudplatillos">Mantenimiento</a>
                                 </div>
                             </li>
@@ -54,7 +54,7 @@
                   Reserva
                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" routerLink="/reserva">Registra </a>
+                                    <a class="dropdown-item" routerLink="/addreserva">Registra </a>
                                     <a class="dropdown-item" routerLink="/crudreserva">Mantenimiento</a>
                                 </div>
                             </li>
@@ -110,7 +110,7 @@
                                   Libre
                                 </button>
                                                             </td>
-                                                            <td *ngIf="aux.estado == 0">
+                                                            <td *ngIf="aux.idtipoest == 0">
                                                                 <button (click)="actualizaEstado(aux)" type="button" style="width: 90px" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModalEliminar">
                                   Ocupado
                                 </button>
@@ -153,7 +153,7 @@
                                                         <div class="mb-3 row">
                                                             <label for="estado" class="col-sm-2 col-form-label">Estado</label>
                                                             <div class="col-sm-10">
-                                                                <select [(ngModel)]="mesa.idtipoest!.idtipoest" class="form-control" id="idtipoest" name="idtipoest">
+                                                                <select [(ngModel)]="mesa.idtipoest" class="form-control" id="idtipoest" name="idtipoest">
                                                                   <option value="-1">[Seleccione]</option>
                                                                   <option value="1">Libre</option>
                                                                   <option value="0">Ocupado</option>

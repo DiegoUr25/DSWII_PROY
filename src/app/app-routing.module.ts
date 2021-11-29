@@ -4,12 +4,14 @@ import { IndexComponent } from './index/index.component';
 import { LoginComponent } from './auth/login.component';
 import { RegistroComponent } from './auth/registro.component';
 import { ProdGuardService as guard } from './guards/prod-guard.service';
-import { CrudperfilComponent } from './components/crudperfil/crudperfil.component';
-import { CrudpostulacionComponent } from './components/crudpostulacion/crudpostulacion.component';
-import { CrudpracticaComponent } from './components/crudpractica/crudpractica.component';
-import { AddperfilComponent } from './components/addperfil/addperfil.component';
-import { AddpostulacionComponent } from './components/addpostulacion/addpostulacion.component';
-import { AddpracticaComponent } from './components/addpractica/addpractica.component';
+import { AddmesaComponent } from './components/addmesa/addmesa.component';
+import { AddsocioComponent } from './components/addsocio/addsocio.component';
+import { AddreservaComponent } from './components/addreserva/addreserva.component';
+import { AddplatillosComponent } from './components/addplatillos/addplatillos.component';
+import { CrudplatillosComponent } from './components/crudplatillos/crudplatillos.component';
+import { CrudsocioComponent } from './components/crudsocio/crudsocio.component';
+import { CrudreservaComponent } from './components/crudreserva/crudreserva.component';
+import { CrudmesaComponent } from './components/crudmesa/crudmesa.component';
 
 
 const routes: Routes = [
@@ -18,12 +20,14 @@ const routes: Routes = [
   {path: 'registro', component: RegistroComponent},
   
   
-  {path:"perfil", component:AddperfilComponent },
-   {path:"postulacion", component:AddpostulacionComponent },
-  {path:"practica", component:AddpracticaComponent },
-  {path:"crudPerfil", component:CrudperfilComponent },
-   {path:"crudPostulacion", component:CrudpostulacionComponent },
-  {path:"crudPractica", component:CrudpracticaComponent },
+  {path:"addmesa", component:AddmesaComponent },
+  {path:"addsocio", component:AddsocioComponent} ,
+  {path:"addreserva", component:AddreservaComponent } ,
+  {path:"addplatillos", component:AddplatillosComponent } ,
+  {path:"crudmesa", component:CrudmesaComponent }  ,
+   {path:"crudreserva",component:CrudreservaComponent},
+   {path:"crudsocio",component:CrudsocioComponent} ,
+   {path:"crudplatillos",component:CrudplatillosComponent},
   {path: '**', redirectTo: '', pathMatch: 'full'},
 ];
 

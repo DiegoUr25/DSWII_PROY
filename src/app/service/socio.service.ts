@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Socio } from '../models/socio';
 
-const baseURL = ""
+const baseURL = "http://localhost:8090/restaurante/socio"
 
 @Injectable({
   providedIn: 'root'
@@ -14,19 +14,24 @@ export class SocioService {
 
 
   registraSocio(data:Socio): Observable<any>{
-    return this.http.post(baseURL+"",data);
+    return this.http.post(baseURL+"/registraSocio",data);
   }
 
   consultaSocio(filtro:String): Observable<Socio[]>{
     if(filtro.trim()==''){
-      return this.http.get<Socio[]>(baseURL+"");
+      return this.http.get<Socio[]>(baseURL+"/listaSocioPorNombreLike/todos");
     }else{
-      return this.http.get<Socio[]>(baseURL+""+filtro);
+      return this.http.get<Socio[]>(baseURL+"/listaSocioPorNombreLike/"+filtro);
     }
   }
 
+  consultaEstadoSocio(): Observable<Socio[]>{
+    return this.http.get<Socio[]>(baseURL+"/listaSocioPorEstadoLike/1")
+  }
+
+
   actualizaSocio(aux:Socio):Observable<any>{
-    return this.http.put<any>(baseURL+"", aux)
+    return this.http.put<any>(baseURL+"/actualizarSocio", aux)
   }
 
 }

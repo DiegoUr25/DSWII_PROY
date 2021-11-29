@@ -5,7 +5,7 @@ import { Mesa } from '../models/mesa';
 
 //LLENAR LOS ESPACIOS VACÍOS
 
-const baseURL = ""
+const baseURL = "http://localhost:8090/restaurante/mesa"
 
 @Injectable({
   providedIn: 'root'
@@ -15,21 +15,27 @@ export class MesaService {
   constructor(private http:HttpClient) { }
 
   registraMesa(data:Mesa):Observable<any>{
-    return this.http.post(baseURL+"",data);
+    return this.http.post(baseURL+"/registraMesa",data);
   }
 
   consultaMesa(filtro:String):Observable<Mesa[]>{
     if(filtro.trim() == ''){
-      return this.http.get<Mesa[]>(baseURL+"");
+      return this.http.get<Mesa[]>(baseURL+"/listaMesaPorNombreLike/todos");
 
     }else{
-      return this.http.get<Mesa[]>(baseURL+""+filtro);
+      return this.http.get<Mesa[]>(baseURL+"/listaMesaPorNombreLike/"+filtro);
     }
 
   }
 
+  consultaEstadoMesa():Observable<any>{
+    return this.http.get<Mesa[]>(baseURL+"/listaMesaPorEstadoLike/1");
+  }
+
+
+
   actualizaMesa(aux:Mesa) : Observable<any>{
-    return this.http.put<any>(baseURL+"", aux)
+    return this.http.put<any>(baseURL+"/actualizarMesa", aux)
   }
 
 }

@@ -37,7 +37,7 @@ export class AddreservaComponent implements OnInit {
 
   constructor(private tokenService: TokenService, private mesaService: MesaService, private socioService: SocioService, private platilloService: PlatillosService, private reservaService: ReservaService) {
 
-     this.mesaService.consultaMesa("todos").subscribe(
+     this.mesaService.consultaEstadoMesa().subscribe(
       
        mesas => {
          this.listaMesas = mesas;
@@ -45,7 +45,7 @@ export class AddreservaComponent implements OnInit {
        
      );
 
-     this.socioService.consultaSocio("todos").subscribe(
+     this.socioService.consultaEstadoSocio().subscribe(
          socios =>{
            this.listaSocios = socios;
          }
@@ -73,6 +73,7 @@ export class AddreservaComponent implements OnInit {
 
   insertReserva(){
     console.log(this.reserva);
+    console.log(this.reserva.fechareserva)
     this.reservaService.registraReserva(this.reserva).subscribe(
       response =>{
         console.log(response.mensaje);
