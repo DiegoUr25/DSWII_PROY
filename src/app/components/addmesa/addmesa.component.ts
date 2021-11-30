@@ -15,7 +15,7 @@ export class AddmesaComponent implements OnInit {
     idtipoest:0,
     descmesa:""
   }
-
+//Mesa
   constructor(private tokenService:TokenService,private mesaService: MesaService){
   }
 
